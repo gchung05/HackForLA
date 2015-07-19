@@ -95,7 +95,7 @@ leaflet(aSet.all) %>% setView(-118.243685, 34.052234, zoom=11) %>%
              color = ~pal(Rate.Norm)
   )
 
-
+save(aSet.all, file="Data/analysisSet.RData")
 
 aSet <- rbind.data.frame(aSet, aSet.all) %>% arrange(OSHPDID, Procedure.Condition)
 rm(hold, hold2)

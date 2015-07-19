@@ -96,6 +96,7 @@ leaflet(aSet.all) %>% setView(-118.243685, 34.052234, zoom=11) %>%
   )
 
 save(aSet.all, file="Data/analysisSet.RData")
+write.xlsx(aSet.all, sheetName="Data", file="Data/analysisSet.xlsx")
 
 aSet <- rbind.data.frame(aSet, aSet.all) %>% arrange(OSHPDID, Procedure.Condition)
 rm(hold, hold2)
